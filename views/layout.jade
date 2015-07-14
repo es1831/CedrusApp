@@ -2,9 +2,13 @@ doctype html
 html(ng-app='MyApp')
   head
     title= title
-    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/angular-bootstrap/ui-bootstrap-csp.css')
+    script(src='/jquery/dist/jquery.js')
     script(src='/angular/angular.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/angular-bootstrap/ui-bootstrap-tpls.js')
     script(src='/javascripts/controllers/main.controller.js')
     script(src='/javascripts/services/ProjectApi.factory.js')
   body

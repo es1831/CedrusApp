@@ -1,5 +1,5 @@
 
-var app = angular.module('MyApp', []);
+var app = angular.module('MyApp', ['ui.bootstrap']);
 
 app
   .controller('MainCtrl', function ($scope, PostsFactory, CommentsFactory) {

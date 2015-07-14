@@ -9,6 +9,6 @@ block content
       div(ng-repeat='post in posts')
           div(class='list-group-item') Title: {{post.title}}
             div Body: {{post.body}}
-            button(ng-click='loadComments(post); showComments = !showComments' class='btn') Comments:
+            button(ng-click='loadComments(post); showComments = !showComments' class='btn btn-success') Comments:
             div(ng-repeat='comment in post.comments' ng-show='showComments')
-              div {{comment.name}}
+              div(class='well well-lg') {{comment.name}}
