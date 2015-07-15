@@ -1,8 +1,15 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(178, 158, 158);
 }
 
 a {
   color: #00B7FF;
+}
+.comment{
+  padding-top: 10px;
+}
+
+.title{
+  text-align: center
 }

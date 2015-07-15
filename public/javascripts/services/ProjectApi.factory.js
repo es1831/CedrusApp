@@ -1,7 +1,10 @@
 'use strict';
 
 angular.module('MyApp')
-  .factory('PostsFactory', function ($http) {
+/*
+Post Factory
+*/
+  .factory('Posts', function($http) {
     return{
       get: function(){
         return $http.get('http://jsonplaceholder.typicode.com/posts');
@@ -11,9 +14,12 @@ angular.module('MyApp')
       }
     }
   })
-  .factory('CommentsFactory', function($http){
+/*
+Comments Factory
+*/
+  .factory('Comments', function($http){
     return{
-      getAll: function(){
+      get: function(){
         return $http.get('http://jsonplaceholder.typicode.com/comments')
       },
       getOne: function(id){

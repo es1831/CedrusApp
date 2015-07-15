@@ -2,16 +2,20 @@
 var app = angular.module('MyApp', ['ui.bootstrap']);
 
 app
-  .controller('MainCtrl', function ($scope, PostsFactory, CommentsFactory) {
-    var getAllPostsPromise = PostsFactory.get();
+  .controller('MainCtrl', function ($scope, Posts, Comments) {
 
-    getAllPostsPromise.success(function(data){
+    //Get all Posts
+    var get_posts_promise = Posts.get();
+
+    get_posts_promise.success(function(data) {
       $scope.posts = data;
     })
 
-    $scope.loadComments = function(post){
-      CommentsFactory.getOne(post.id).success(function(data){
+    //Load Posts
+    $scope.loadComments = function(post) {
+      Comments.getOne(post.id).success(function(data) {
             post.comments = data;
       })
     }
+
   });

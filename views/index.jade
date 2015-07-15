@@ -1,14 +1,17 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+  div.title
+    h1 Sample Blog
+    p Welcome to the Sample posts
 
   body
-    div(ng-controller='MainCtrl' class='list-group')
-      div(ng-repeat='post in posts')
-          div(class='list-group-item') Title: {{post.title}}
-            div Body: {{post.body}}
-            button(ng-click='loadComments(post); showComments = !showComments' class='btn btn-success') Comments:
-            div(ng-repeat='comment in post.comments' ng-show='showComments')
-              div(class='well well-lg') {{comment.name}}
+    div.list-group.container(ng-controller = "MainCtrl")
+      div(ng-repeat = "post in posts")
+          div(class = "list-group-item")
+            h3 Title: {{post.title}}
+            div
+            h5 Post: {{post.body}}
+            button.btn.btn-success.comment(ng-click = "loadComments(post); showComments = !showComments") Show Comments
+            div(ng-repeat = "comment in post.comments" ng-show = "showComments")
+              div.comment E-mail:{{comment.email}}
+              div.well.well-lg {{comment.name}}
