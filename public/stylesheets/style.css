@@ -1,6 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(178, 158, 158);
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 a {
@@ -12,4 +14,18 @@ a {
 
 .title{
   text-align: center
+}
+
+.footer-inverse {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #9d9d9d;
+}
+.footer-text {
+  padding-top:20px;
+  text-align: center;
+}
+.button {
+  padding-left: 42%;
 }

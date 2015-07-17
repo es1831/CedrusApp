@@ -1,7 +1,14 @@
+angular.module('MyApp')
+  .config(function ($stateProvider) {
+    $stateProvider
+      .state('main', {
+        url: '/main',
+        templateUrl: 'views/index.html',
+        controller: 'MainCtrl'
+      });
+  });
 
-var app = angular.module('MyApp', ['ui.bootstrap']);
-
-app
+angular.module('MyApp')
   .controller('MainCtrl', function ($scope, Posts, Comments) {
 
     //Get all Posts
@@ -19,3 +26,4 @@ app
     }
 
   });
+

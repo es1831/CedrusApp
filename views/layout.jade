@@ -3,6 +3,8 @@ html(ng-app='MyApp')
 
   head
     title= title
+    base(href='/')
+    include ./includes/navbar.jade
 
     //- CSS Files
     link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
@@ -12,19 +14,17 @@ html(ng-app='MyApp')
     //- Javascript Files
     script(src='/jquery/dist/jquery.js')
     script(src='/angular/angular.js')
+    script(src='/angular-ui-router/release/angular-ui-router.js')
     script(src='/bootstrap/dist/js/bootstrap.min.js')
     script(src='/angular-bootstrap/ui-bootstrap-tpls.js')
+    script(src='/app.js')
     script(src='/javascripts/controllers/main.controller.js')
+    script(src='/javascripts/controllers/about.controller.js')
     script(src='/javascripts/services/ProjectApi.factory.js')
 
   body
-//- Navbar
-.header
-    .navbar.navbar-inverse(role='navigation')
-          .navbar-header
-            a.navbar-brand(href='/') Cedrus
-          #js-navbar-collapse.collapse.navbar-collapse
-            ul.nav.navbar-nav
-              li.active
-                a Home
+    div.title
+      h1 Sample Blog
+      p Welcome to the Sample posts
     block content
+    include ./includes/footer.jade
