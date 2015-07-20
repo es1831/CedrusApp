@@ -8,6 +8,10 @@ body {
 a {
   color: #00B7FF;
 }
+
+/*
+Post Page
+*/
 .comment{
   padding-top: 10px;
 }
@@ -16,6 +20,13 @@ a {
   text-align: center
 }
 
+.button {
+  padding-left: 42%;
+}
+
+/*
+Footer
+*/
 .footer-inverse {
   bottom: 0;
   width: 100%;
@@ -25,7 +36,4 @@ a {
 .footer-text {
   padding-top:20px;
   text-align: center;
-}
-.button {
-  padding-left: 42%;
 }

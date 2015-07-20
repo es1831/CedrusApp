@@ -2,11 +2,23 @@
 
 angular.module('MyApp', [
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngRoute'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-    $urlRouterProvider
-      .otherwise('/');
+  .config(function ($urlRouterProvider, $locationProvider, $routeProvider) {
+    $routeProvider.
+      when('/', {
+        templateUrl: 'home'
+      }).
+      when('/page/about', {
+        templateUrl: 'about'
+      }).
+      when('/page/contactUs', {
+        templateUrl: 'contactUs'
+      }).
+      otherwise({
+        redirectTo: '/'
+      });
 
     $locationProvider.html5Mode(true);
   });
