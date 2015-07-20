@@ -8,13 +8,13 @@ angular.module('MyApp', [
   .config(function ($urlRouterProvider, $locationProvider, $routeProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: 'home'
+        templateUrl: '/page/home'
       }).
-      when('/page/about', {
-        templateUrl: 'about'
+      when('/about', {
+        templateUrl: '/page/about'
       }).
-      when('/page/contactUs', {
-        templateUrl: 'contactUs'
+      when('/contactUs', {
+        templateUrl: '/page/contactUs'
       }).
       otherwise({
         redirectTo: '/'
