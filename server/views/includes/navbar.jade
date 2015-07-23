@@ -1,4 +1,4 @@
-.header
+.header(ng-controller = "NavCtrl")
     div.navbar.navbar-inverse.navbar-fixed-top
       div.navbar-header
         a.navbar-brand(href="/") Cedrus
@@ -10,4 +10,9 @@
             a(href="/about") About
           li
             a(href="/contactUs") Contact Us
-
+          li
+            a(href="/posts") Posts
+          li
+            a(ng-hide="current_user" href="/login") Login
+          li
+            a(ng-show="current_user" href="/logout" target="_self") Logout
