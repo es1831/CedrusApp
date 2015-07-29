@@ -1,0 +1,55 @@
+body
+  div.container.sign-up(ng-controller = "StepThreeCtrl")
+    h3.header LETS GET TO KNOW YOU.
+    div.row
+      form.col.s12(name='formValidation')
+        div.row
+          div.input-field.col.s6
+            input.validate(type="text", id="disabled" value= '{{newUser.first_name}}', disabled)
+            label.active(for="disabled") First Name
+        div.row
+          div.input-field.col.s6
+            input.validate(type="text", id="disabled" value= '{{newUser.last_name}}', disabled)
+            label.active(for="disabled") Last Name
+        div.row
+          div.input-field.col.s6
+            input.validate(type="text", id="disabled" value= '{{newUser.email}}', disabled)
+            label.active(for="disabled") Email
+        div.row
+          div.input-field.col.s6
+            input.validate(type="text", ng-model= 'newUser.address', required)
+            label(for="icon_prefix") Address
+        div.row
+          div.input-field.col.s6
+            select.browser-default(ng-model='newUser.state', ng-change='getCities(newUser.state)', required)
+              option(value='', disabled, selected) Choose State
+              option(ng-repeat='state in states', value='{{state}}') {{state}}
+        div.row(ng-if='newUser.state')
+          div.input-field.col.s6
+            select.browser-default(ng-model='newUser.city' required)
+              option(value='', disabled, selected) Choose City
+              option(ng-repeat='city in cities', value='{{city}}') {{city}}
+        div.row
+          div.input-field.col.s6
+            input(id="input_text", type="text", ng-model='newUser.zipCode', maxlength="5", required)
+            label(for="input_text") ZipCode
+        div.row.extra
+            input(type='checkbox', id='test5', ng-model='newUser.isOver18')
+            label.question(for='test5') Are you over 18?
+        div.row(ng-if='newUser.isOver18')
+          div.input-field.col.s6
+            textarea.materialize-textarea(id="textarea1", ng-model='newUser.question', length="120")
+            label(for="textarea1") What is the meaning of life?
+        div.row(ng-if='!newUser.isOver18')
+          div.input-field.col.s6
+            textarea.materialize-textarea(id="textarea1" ng-model='newUser.question' length="120")
+            label(for="textarea1") Tell me your favorite memory.
+        div.row.extra
+            input(type='checkbox', id='test6', ng-model='newUser.wantAdmin')
+            label.question(for='test6') Would you like to be an Admin?
+
+        div.row
+          button.btn.waves-effect.waves-light(type="submit",
+                                              name="action",
+                                              ng-click="verify()",
+                                              ng-disabled="formValidation.$invalid") Submit

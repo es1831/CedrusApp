@@ -8,6 +8,9 @@ Auth Factory
     return{
       get: function(user){
         return $http.get('/getUser');
-        }
+      },
+      create: function(newUser){
+        return $http.post('/verify', newUser);
       }
+    }
   })

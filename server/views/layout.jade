@@ -7,6 +7,7 @@ html(ng-app='MyApp')
     include ./includes/navbar.jade
 
     //- CSS Files
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css")
     link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/angular-bootstrap/ui-bootstrap-csp.css')
     link(rel="stylesheet", href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
@@ -17,6 +18,7 @@ html(ng-app='MyApp')
     script(src='/angular/angular.js')
     script(src='/angular-route/angular-route.js')
     script(src='/angular-ui-router/release/angular-ui-router.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
     script(src='/bootstrap/dist/js/bootstrap.min.js')
     script(src='/angular-bootstrap/ui-bootstrap-tpls.js')
     script(src='/app.js')
@@ -24,14 +26,18 @@ html(ng-app='MyApp')
     script(src='/javascripts/services/auth.service.js')
     script(src='/javascripts/controllers/nav.controller.js')
     script(src='/javascripts/controllers/main.controller.js')
+    script(src='/javascripts/controllers/signUp.controller.js')
+    script(src='/javascripts/controllers/stepTwo.controller.js')
+    script(src='/javascripts/controllers/stepThree.controller.js')
     script(src='/javascripts/controllers/login.controller.js')
     script(src='/javascripts/controllers/posts.controller.js')
     script(src='/javascripts/controllers/about.controller.js')
 
   body
-    div.title
-      h1 Sample Blog
-      p Welcome to the Sample posts
+    div.col.s12.m6
+      div.title.card.blue-grey.darken-1
+        h1.card-content.white-text Sample Blog
+        p.card-content.white-text Welcome to the Sample posts
     div(ng-view)
       block content
     include ./includes/footer.jade

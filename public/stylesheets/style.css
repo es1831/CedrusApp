@@ -1,7 +1,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: rgb(178, 158, 158);
-  padding-top: 70px;
+  padding-top: 46px;
   padding-bottom: 70px;
 }
 
@@ -9,6 +9,18 @@ a {
   color: #00B7FF;
 }
 .right {
+  float: right;
+}
+/*
+LOG-IN
+*/
+
+.google {
+  margin-top: -94px;
+  margin-left: 114px;
+}
+
+.login{
   float: right;
 }
 
@@ -26,6 +38,76 @@ Post Page
 .button {
   padding-left: 42%;
 }
+
+/*
+Sign-up
+*/
+.sign-up {
+  margin-left: 29%;
+}
+
+.header {
+  margin-left: 12%;
+}
+input[type="checkbox"]+label {
+  font-size: 2rem;
+  color: black;
+}
+.extra{
+  margin-top: 72px;
+}
+/*
+Materialize Customization
+*/
+    .input-field {
+      margin-top: 4rem;
+    }
+    input[type=text], textarea.materialize-textarea  {
+      border-bottom: 1px solid #502B2B;
+    }
+    input[type=email]+label:after{
+      position: relative;
+    }
+  /* label color */
+   .input-field label {
+     color: #000;
+     font-size: 15px;
+   }
+  .input-field label.active{
+    font-size: 10px;
+  }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #000;
+     font-size: 12px;
+   }
+  .input-field input[type=email]:focus + label {
+     color: #000;
+     font-size: 12px;
+   }
+  .input-field input[type=password]:focus + label {
+     color: #000;
+     font-size: 12px;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+      border-bottom: 1px solid #000;
+      box-shadow: 0 1px 0 0 #000;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid green;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid red;
+     box-shadow: 0 1px 0 0 #000;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #000;
+   }
 
 /*
 Footer

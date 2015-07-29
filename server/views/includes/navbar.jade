@@ -13,6 +13,8 @@
           li
             a(href="/posts") Posts
           li
-            a(ng-hide="current_user" href="/login") Login
+            a.login(ng-hide="current_user" href="/login") Login
           li
             a(ng-show="current_user" href="/logout" target="_self") Logout
+          li
+            a(ng-hide="current_user", href="/signUp") Sign Up

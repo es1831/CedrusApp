@@ -2,7 +2,7 @@ body
   div(ng-controller = "MainCtrl")
     div.container
       h3 Welcome to Emmie's Private Blog
-      h4(ng-hide = "current_user") Go ahead and Sign in
+      h4(ng-hide = "current_user") Go ahead and Sign in or Sign up!
       div(ng-if= "current_user.displayName")
         h4(ng-show = "current_user") WHATS UP {{current_user.displayName}}
       div(ng-if= "!current_user.displayName")

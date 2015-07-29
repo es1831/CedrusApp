@@ -4,5 +4,6 @@ angular.module('MyApp')
     Auth.get().then(function(res){
       $scope.current_user = res.data;
     });
+
   });
 

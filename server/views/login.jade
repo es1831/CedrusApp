@@ -9,17 +9,37 @@
 //-           input.form-control(type='password', name='password', ng-model = "user.password")
 //-         button.btn.btn-warning.btn-lg(type='submit') Login
 
+//- div(ng-controller="LoginCtrl")
+//-   div.container
+//-     h2
+//-       span.fa.fa-sign-in Login page
+//-     div
+//-       form(action="/login", method="post")
+//-           div.form-group.input-field.col.s6
+//-               label(for="username") Username
+//-               input.form-control(type="text", name="username", placeholder="Username")
+//-           div.form-group
+//-               label Password
+//-               input.form-control(type="password", name="password")
+//-           button.btn.btn-warning.btn-lg(type="submit") Log in
+//-       a.btn.btn-danger.btn-lg.google(href="/auth/google/" target='_self')
+//-         span.fa.fa-google-plus Google
+
 div(ng-controller="LoginCtrl")
   div.container
     h2
       span.fa.fa-sign-in Login page
-    form(action="/login", method="post")
-        div.form-group
-            label Username
-            input.form-control(type="text", name="username")
-        div.form-group
-            label Password
-            input.form-control(type="password", name="password")
-        button.btn.btn-warning.btn-lg(type="submit") Log in
-    a.btn.btn-danger(href="/auth/google/" target='_self')
-      span.fa.fa-google-plus Google
+    div
+      form.col.s12(action="/login", method="post")
+        div.row
+          div.input-field.col.s12
+            input.validate(name="username" type="text")
+            label(for="username") Username
+        div.row
+          div.input-field.col.s12
+            input.validate(name="password" type="text")
+            label(for="password") Password
+        div.row
+          button.btn.btn-warning(type="submit") Log in
+      a.btn.btn-danger.google(href="/auth/google/" target='_self')
+        span.fa.fa-google-plus Google

@@ -28,6 +28,15 @@ angular.module('MyApp', [
       when('/contactUs', {
         templateUrl: '/page/contactUs'
       }).
+      when('/signUp', {
+        templateUrl: '/page/signUp'
+      }).
+      when('/stepTwo', {
+        templateUrl: '/signUp/stepTwo'
+      }).
+      when('/stepThree', {
+        templateUrl: '/signUp/stepThree'
+      }).
       otherwise({
         redirectTo: '/'
       });
