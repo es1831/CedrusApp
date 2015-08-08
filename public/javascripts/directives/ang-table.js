@@ -8,7 +8,7 @@ angular.module('MyApp')
               data: '='
           },
           link: function(scope, element, attrs){
-
+              console.log(scope);
           }
       };
   });
