@@ -98,3 +98,10 @@ Comments Factory
       }
     }
   })
+  .factory('Users', function($http){
+        return{
+          get: function(){
+            return $http.get('http://jsonplaceholder.typicode.com/users');
+          }
+        }
+  })

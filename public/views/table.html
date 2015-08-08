@@ -1,0 +1,17 @@
+<h1>THIS IS A TABLE</h1>
+<div class='container'>
+    <table class="table table-striped" cellspacing="0">
+        <thead>
+            <tr>
+                <th ng-repeat="(key, value) in data">{{key}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="row in data">
+                <td ng-repeat="cell in row">
+                    {{cell}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
